@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-100 text-ink font-body;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 bg-pink-500 text-white
+           font-body font-medium rounded-full
+           transition-all duration-200
+           hover:bg-pink-600;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 bg-transparent text-ink
+           font-body font-medium rounded-full
+           border-2 border-ink/20
+           transition-all duration-200
+           hover:border-ink hover:bg-ink hover:text-white;
+  }
+}
