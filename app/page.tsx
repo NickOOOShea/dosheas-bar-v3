@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-end">
         <div className="absolute inset-0">
-          <Image src="/images/exterior-wide-classic.jpg" alt="D O'Shea's Bar - The iconic pink facade in Sneem" fill className="object-cover" priority quality={90} />
+          <Image src="/images/exterior-wide-classic.webp" alt="D O'Shea's Bar - The iconic pink facade in Sneem" fill className="object-cover" priority quality={90} />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         </div>
         <div className="relative z-10 w-full pb-16 md:pb-24 lg:pb-32 pt-32">
@@ -48,7 +48,7 @@ export default function HomePage() {
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
-              <div className="aspect-[4/5] relative"><Image src="/images/exterior-front-evening.jpg" alt="The pink facade of D O'Shea's Bar" fill className="object-cover" /></div>
+              <div className="aspect-[4/5] relative"><Image src="/images/exterior-front-evening.webp" alt="The pink facade of D O'Shea's Bar" fill className="object-cover" /></div>
               <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-pink-500 -z-10" />
             </div>
             <div>
@@ -93,7 +93,7 @@ export default function HomePage() {
               <Link href="/menu" className="btn-pink">View Full Menu<ArrowRight className="w-5 h-5" /></Link>
             </div>
             <div className="relative">
-              <div className="aspect-square relative overflow-hidden"><Image src="/images/food-burger-chips.jpg" alt="D O'Shea's burger with hand-cut chips" fill className="object-cover" /></div>
+              <div className="aspect-square relative overflow-hidden"><Image src="/images/food-burger-chips.webp" alt="D O'Shea's burger with hand-cut chips" fill className="object-cover" /></div>
               <div className="absolute -bottom-6 -left-6 bg-pink-500 p-6 max-w-xs">
                 <Quote className="w-8 h-8 text-pink-300 mb-2" />
                 <p className="font-display italic text-white">"Best fish and chips I've ever had. 10 out of 10."</p>
@@ -120,11 +120,11 @@ export default function HomePage() {
           <div className="text-center mb-12"><p className="kicker mb-4">Inside & Out</p><h2 className="text-ink text-3xl md:text-4xl font-display font-bold">The place behind the photos</h2></div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="col-span-2 row-span-2 relative aspect-square lg:aspect-auto">
-              <Image src="/images/exterior-sunset.jpg" alt="D O'Shea's at sunset" fill className="object-cover" />
+              <Image src="/images/exterior-sunset.webp" alt="D O'Shea's at sunset" fill className="object-cover" />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent"><p className="text-white font-medium">Golden hour on North Square</p></div>
             </div>
-            <div className="relative aspect-square group overflow-hidden"><Image src="/images/interior-guinness.jpg" alt="A perfect pint" fill className="object-cover group-hover:scale-105 transition-transform duration-500" /></div>
-            <div className="relative aspect-square group overflow-hidden"><Image src="/images/terrace-guinness-view.jpg" alt="Terrace views" fill className="object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+            <div className="relative aspect-square group overflow-hidden"><Image src="/images/interior-guinness.webp" alt="A perfect pint" fill className="object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+            <div className="relative aspect-square group overflow-hidden"><Image src="/images/terrace-guinness-view.webp" alt="Terrace views" fill className="object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           </div>
         </div>
       </section>
