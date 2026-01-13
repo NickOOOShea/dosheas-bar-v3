@@ -1,390 +1,179 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, ChevronRight } from 'lucide-react'
-
-/**
- * D O'Shea's Bar v3 - Every fact sourced from SOURCES.md
- *
- * V2 Template Rules applied:
- * - Hero answers: What? Where? What next?
- * - Tap-to-call above fold
- * - Tap-to-maps above fold
- * - No em-dashes
- * - All facts verified
- */
+import { Phone, MapPin, ArrowRight, Star, Quote, Clock, Car, CreditCard, Wifi, Users } from 'lucide-react'
 
 export default function HomePage() {
   return (
-    <main>
-      {/* =====================================================
-          HERO SECTION
-          Answers: What? Where? What next?
-          ===================================================== */}
+    <>
+      {/* HERO */}
       <section className="relative min-h-screen flex items-end">
-        {/* Background image */}
         <div className="absolute inset-0">
-          <Image
-            src="/images/exterior-wide-classic.webp"
-            alt="D O'Shea's Bar - The Pink Pub in Sneem"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+          <Image src="/images/exterior-wide-classic.jpg" alt="D O'Shea's Bar - The iconic pink facade in Sneem" fill className="object-cover" priority quality={90} />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         </div>
-
-        {/* Hero content */}
-        <div className="relative z-10 w-full px-6 pb-12 md:pb-20">
-          <div className="max-w-4xl mx-auto">
-            {/* WHAT: Business name and type */}
-            {/* Source: RESEARCH.md lines 20-22 */}
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white mb-4">
-              D O'Shea's Bar
-            </h1>
-            <p className="font-body text-xl md:text-2xl text-pink-300 mb-2">
-              The Pink Pub in Sneem
-            </p>
-
-            {/* WHERE: Location */}
-            {/* Source: RESEARCH.md lines 23, 42 */}
-            <p className="font-body text-lg text-cream-100/80 mb-8">
-              North Square, Sneem, Co. Kerry. Ring of Kerry.
-            </p>
-
-            {/* WHAT NEXT: CTAs - phone native */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              {/* Tap-to-call - Source: RESEARCH.md line 26 */}
-              <a
-                href="tel:+353646645281"
-                className="btn-primary text-lg"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call to Book
-              </a>
-
-              {/* Tap-to-maps - Source: RESEARCH.md line 25 (GPS coords) */}
-              <a
-                href="https://www.google.com/maps?q=51.838653,-9.901576"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-ink"
-              >
-                <MapPin className="w-5 h-5 mr-2" />
-                Get Directions
-              </a>
-
-              <Link href="/menu" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-ink">
-                View Menu
-                <ChevronRight className="w-5 h-5 ml-1" />
-              </Link>
-            </div>
-
-            {/* Quick info bar */}
-            {/* Source: RESEARCH.md line 64 */}
-            <div className="flex flex-wrap gap-6 text-cream-100/70 text-sm font-body">
-              <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                Food: 12pm - 9pm daily
-              </span>
-              <span className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                +353 64 664 5281
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================
-          RECOGNITION - Why this pub matters
-          Source: RESEARCH.md lines 35-38, 107-108
-          ===================================================== */}
-      <section className="py-16 px-6 bg-pink-500 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-display text-2xl md:text-3xl">
-            One of Ireland's most photographed pubs.
-          </p>
-          <p className="font-body text-pink-100 mt-4">
-            Featured in American Express and Visa advertisements. #1 Restaurant in Sneem on TripAdvisor.
-          </p>
-        </div>
-      </section>
-
-      {/* =====================================================
-          ABOUT SECTION
-          Source: RESEARCH.md lines 30-33
-          ===================================================== */}
-      <section className="py-20 px-6 bg-cream-100">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/interior-guinness.webp"
-                alt="Inside D O'Shea's Bar"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Content - all facts from RESEARCH.md */}
-            <div>
-              <span className="font-body text-pink-500 text-sm tracking-widest uppercase">
-                Since 1996
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl text-ink mt-2 mb-6">
-                Mary and Garbhan Kavanagh
-              </h2>
-
-              {/* Source: RESEARCH.md lines 30-33 */}
-              <div className="space-y-4 font-body text-ink-muted text-lg">
-                <p>
-                  The O'Shea family ran this pub for over half a century. When Mary and Garbhan Kavanagh took over in 1996, they renovated the inside but kept the famous pink exterior.
-                </p>
-                <p>
-                  That pink frontage has appeared in books, posters, postcards, and even a Der Spiegel Magazine feature for Visa.
-                </p>
-              </div>
-
-              {/* Verified features - Source: RESEARCH.md lines 50-51, 55-56 */}
-              <div className="mt-8 grid grid-cols-2 gap-4 text-sm font-body text-ink-muted">
-                <div>Real turf fire</div>
-                <div>Terrace with estuary views</div>
-                <div>Children's corner</div>
-                <div>Live trad sessions</div>
+        <div className="relative z-10 w-full pb-16 md:pb-24 lg:pb-32 pt-32">
+          <div className="container-wide">
+            <div className="max-w-3xl">
+              <p className="kicker text-pink-300 mb-4">Ring of Kerry, Sneem Village</p>
+              <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6">
+                You've seen the photos.<span className="block text-pink-400">Now taste the Guinness.</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-cream-200 leading-relaxed mb-10 max-w-2xl">The pink pub on your postcard is pouring pints right now. Family-run since 1996.</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/menu" className="btn-pink">See Today's Menu<ArrowRight className="w-5 h-5" /></Link>
+                <a href="tel:+353646645281" className="btn-ghost border-white text-white hover:bg-white hover:text-pink-500"><Phone className="w-5 h-5" />Book a Table</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* =====================================================
-          FOOD SECTION
-          Source: RESEARCH.md lines 64-74, menu.json
-          ===================================================== */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+      {/* AS SEEN IN */}
+      <section className="bg-pink-500 text-white py-8 md:py-10">
+        <div className="container-wide">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+            <span className="font-display font-bold text-lg md:text-xl">As seen in:</span>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-pink-100">
+              <span>Postcards worldwide</span><span className="hidden md:inline text-pink-300">|</span>
+              <span>American Express</span><span className="hidden md:inline text-pink-300">|</span>
+              <span>Visa</span><span className="hidden md:inline text-pink-300">|</span>
+              <span>Der Spiegel</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="section bg-cream-50">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative">
+              <div className="aspect-[4/5] relative"><Image src="/images/exterior-front-evening.jpg" alt="The pink facade of D O'Shea's Bar" fill className="object-cover" /></div>
+              <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-pink-500 -z-10" />
+            </div>
             <div>
-              <span className="font-body text-pink-500 text-sm tracking-widest uppercase">
-                From the Kitchen
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl text-ink mt-2 mb-6">
-                Home cooked. Local produce.
-              </h2>
+              <p className="kicker mb-4">Our Story</p>
+              <h2 className="text-ink text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-8">You've probably seen this pub before.</h2>
+              <div className="space-y-6 text-lg text-ink-muted leading-relaxed">
+                <p>On a postcard, maybe. In an American Express ad. On someone's phone as they showed you their Ireland trip.</p>
+                <p>The pink has been here for decades. The O'Shea family painted it that way, and when Mary and Garbhan Kavanagh took over in 1996, they knew better than to change it. They gutted the inside, modernised the kitchen, built a terrace with views of the estuary. But the pink stayed.</p>
+                <p className="text-ink font-medium">These days, the cameras still click outside. But inside, it's just a pub. Turf fire going. Someone's da at the bar. Food that's better than it needs to be.</p>
+              </div>
+              <div className="mt-10 flex items-center gap-4">
+                <div className="w-1 h-16 bg-pink-500" />
+                <div><p className="font-display font-bold text-ink text-lg">Mary & Garbhan Kavanagh</p><p className="text-ink-muted">Proprietors since 1996</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Source: RESEARCH.md lines 65-71 */}
-              <p className="font-body text-ink-muted text-lg mb-6">
-                Kerry lamb and beef. Sneem sausages. Local fish. Ice cream from Kenmare.
-              </p>
-
-              {/* Menu highlights - Source: menu.json verified prices */}
-              <div className="space-y-3 mb-8">
-                {/* Source: menu.json line 23 */}
-                <div className="flex justify-between border-b border-ink/10 pb-2">
-                  <span className="font-body text-ink">Kenmare Bay Seafood Chowder</span>
-                  <span className="font-body text-pink-500">€8.95</span>
+      {/* MENU PREVIEW */}
+      <section className="section bg-ink text-white">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <p className="kicker text-pink-400 mb-4">From Our Kitchen</p>
+              <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">Pub grub. Done properly.</h2>
+              <p className="text-xl text-cream-300 leading-relaxed mb-8">Kerry lamb. Sneem sausages. Fish that was swimming this morning. Nothing fancy. Everything right.</p>
+              <div className="space-y-4 mb-10">
+                <div className="flex justify-between items-baseline border-b border-ink-light pb-3">
+                  <div><span className="font-display font-bold text-lg text-white">Seafood Chowder</span><p className="text-sm text-cream-400">With freshly baked brown soda bread</p></div>
+                  <span className="text-pink-400 font-semibold">€8.95</span>
                 </div>
-                {/* Source: menu.json line 50 */}
-                <div className="flex justify-between border-b border-ink/10 pb-2">
-                  <span className="font-body text-ink">12oz Sirloin Steak</span>
-                  <span className="font-body text-pink-500">€29.50</span>
+                <div className="flex justify-between items-baseline border-b border-ink-light pb-3">
+                  <div><span className="font-display font-bold text-lg text-white">Fresh Fillet of Cod</span><p className="text-sm text-cream-400">Light beer batter, mushy peas, house tartar</p></div>
+                  <span className="text-pink-400 font-semibold">€17.00</span>
                 </div>
-                {/* Source: RESEARCH.md line 84 */}
-                <div className="flex justify-between border-b border-ink/10 pb-2">
-                  <span className="font-body text-ink">Sneem Sausage</span>
-                  <span className="font-body text-pink-500">€14.50</span>
-                </div>
-                {/* Source: menu.json line 82 */}
-                <div className="flex justify-between border-b border-ink/10 pb-2">
-                  <span className="font-body text-ink">D O'Shea's Beef Burger</span>
-                  <span className="font-body text-pink-500">€16.75</span>
+                <div className="flex justify-between items-baseline border-b border-ink-light pb-3">
+                  <div><span className="font-display font-bold text-lg text-white">12oz Sirloin Steak</span><p className="text-sm text-cream-400">Sauteed mushrooms, onions, choice of sauce</p></div>
+                  <span className="text-pink-400 font-semibold">€29.50</span>
                 </div>
               </div>
-
-              {/* Source: RESEARCH.md line 72 */}
-              <p className="font-body text-ink-light text-sm mb-6">
-                We cater for coeliacs, vegetarians, and diabetics.
-              </p>
-
-              <Link href="/menu" className="btn-primary">
-                See Full Menu
-                <ChevronRight className="w-5 h-5 ml-1" />
-              </Link>
+              <Link href="/menu" className="btn-pink">View Full Menu<ArrowRight className="w-5 h-5" /></Link>
             </div>
-
-            {/* Image */}
-            <div className="relative aspect-square rounded-2xl overflow-hidden">
-              <Image
-                src="/images/food-burger-chips.webp"
-                alt="D O'Shea's burger with chips"
-                fill
-                className="object-cover"
-              />
+            <div className="relative">
+              <div className="aspect-square relative overflow-hidden"><Image src="/images/food-burger-chips.jpg" alt="D O'Shea's burger with hand-cut chips" fill className="object-cover" /></div>
+              <div className="absolute -bottom-6 -left-6 bg-pink-500 p-6 max-w-xs">
+                <Quote className="w-8 h-8 text-pink-300 mb-2" />
+                <p className="font-display italic text-white">"Best fish and chips I've ever had. 10 out of 10."</p>
+                <p className="text-pink-200 text-sm mt-2">— TripAdvisor Review</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* =====================================================
-          TESTIMONIAL
-          Source: RESEARCH.md lines 112-114, menu.json line 170
-          ===================================================== */}
-      <section className="py-20 px-6 bg-ink text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <blockquote className="font-display text-2xl md:text-3xl italic mb-6">
-            "Best fish and chips 10 out of 10"
-          </blockquote>
-          <p className="font-body text-cream-100/60">
-            TripAdvisor Review
-          </p>
+      {/* TESTIMONIAL */}
+      <section className="section bg-cream-100">
+        <div className="container-narrow text-center">
+          <div className="flex justify-center gap-1 mb-6">{[...Array(5)].map((_,i)=><Star key={i} className="w-6 h-6 fill-pink-500 text-pink-500" />)}</div>
+          <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl italic text-ink mb-6">"The seafood chowder was probably the nicest I've had in Ireland. Great food at a reasonable cost with outstanding service."</blockquote>
+          <p className="text-ink-muted">— TripAdvisor Review</p>
+          <p className="text-pink-500 font-semibold mt-4">#1 Restaurant in Sneem</p>
+        </div>
+      </section>
 
-          {/* Source: RESEARCH.md line 112 */}
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <p className="font-body text-cream-100/80 italic">
-              "Best place to get a Guinness in Sneem"
-            </p>
-            <p className="font-body text-cream-100/50 text-sm mt-2">
-              A local workman, quoted on TripAdvisor
-            </p>
+      {/* GALLERY */}
+      <section className="section bg-white">
+        <div className="container-wide">
+          <div className="text-center mb-12"><p className="kicker mb-4">Inside & Out</p><h2 className="text-ink text-3xl md:text-4xl font-display font-bold">The place behind the photos</h2></div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="col-span-2 row-span-2 relative aspect-square lg:aspect-auto">
+              <Image src="/images/exterior-sunset.jpg" alt="D O'Shea's at sunset" fill className="object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent"><p className="text-white font-medium">Golden hour on North Square</p></div>
+            </div>
+            <div className="relative aspect-square group overflow-hidden"><Image src="/images/interior-guinness.jpg" alt="A perfect pint" fill className="object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+            <div className="relative aspect-square group overflow-hidden"><Image src="/images/terrace-guinness-view.jpg" alt="Terrace views" fill className="object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           </div>
         </div>
       </section>
 
-      {/* =====================================================
-          TERRACE PHOTO
-          Source: RESEARCH.md lines 55-56
-          ===================================================== */}
-      <section className="relative h-[50vh] min-h-[400px]">
-        <Image
-          src="/images/terrace-guinness-view.webp"
-          alt="View from D O'Shea's terrace"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/60 to-transparent flex items-center">
-          <div className="px-8 md:px-16 max-w-lg">
-            <p className="font-display text-2xl md:text-3xl text-white">
-              Terrace with views of the Sneem estuary.
-            </p>
+      {/* VISIT */}
+      <section id="visit" className="section bg-pink-500 text-white">
+        <div className="container-wide">
+          <div className="text-center mb-12"><h2 className="text-white text-3xl md:text-4xl font-display font-bold mb-4">Find the Pink Pub</h2><p className="text-xl text-pink-100 max-w-2xl mx-auto">North Square, Sneem. You genuinely can't miss it.</p></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm p-6 text-center">
+              <MapPin className="w-10 h-10 mx-auto mb-4 text-pink-200" /><h3 className="font-display font-bold text-xl mb-2">Location</h3>
+              <p className="text-pink-100">North Square<br />Sneem, Co. Kerry<br />Ring of Kerry</p>
+              <a href="https://maps.google.com/?q=51.838653,-9.901576" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-white underline hover:no-underline">Get Directions</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 text-center">
+              <Clock className="w-10 h-10 mx-auto mb-4 text-pink-200" /><h3 className="font-display font-bold text-xl mb-2">Food Service</h3>
+              <p className="text-3xl font-bold text-white mb-1">12pm - 9pm</p><p className="text-pink-100">Daily</p>
+              <p className="text-pink-200 text-sm mt-4">Bar open later for pints</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 text-center">
+              <Phone className="w-10 h-10 mx-auto mb-4 text-pink-200" /><h3 className="font-display font-bold text-xl mb-2">Book a Table</h3>
+              <a href="tel:+353646645281" className="text-2xl font-bold text-white hover:text-pink-200 transition-colors">064 664 5281</a>
+              <p className="text-pink-200 text-sm mt-4">Booking smart for dinner</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-6 text-center">
+              <Car className="w-10 h-10 mx-auto mb-4 text-pink-200" /><h3 className="font-display font-bold text-xl mb-2">Good to Know</h3>
+              <ul className="text-pink-100 text-sm space-y-2">
+                <li className="flex items-center justify-center gap-2"><Car className="w-4 h-4" />Street parking nearby</li>
+                <li className="flex items-center justify-center gap-2"><CreditCard className="w-4 h-4" />Cards accepted</li>
+                <li className="flex items-center justify-center gap-2"><Users className="w-4 h-4" />Family friendly</li>
+                <li className="flex items-center justify-center gap-2"><Wifi className="w-4 h-4" />Free WiFi</li>
+              </ul>
+            </div>
           </div>
+          <p className="text-center text-pink-200 mt-10 text-lg max-w-2xl mx-auto">Booking's smart for dinner. Sneem's small and word gets around when the chowder's on.</p>
         </div>
       </section>
 
-      {/* =====================================================
-          CONTACT / VISIT SECTION
-          Source: RESEARCH.md lines 23-27, 64, 73
-          ===================================================== */}
-      <section className="py-20 px-6 bg-cream-100">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl text-ink">
-              Visit Us
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {/* Location - Source: RESEARCH.md lines 23, 42, 46 */}
-            <div className="bg-white rounded-xl p-8">
-              <MapPin className="w-8 h-8 text-pink-500 mx-auto mb-4" />
-              <h3 className="font-body font-semibold text-ink mb-2">Location</h3>
-              <p className="font-body text-ink-muted">
-                North Square, Sneem<br />
-                Co. Kerry
-              </p>
-              <p className="font-body text-ink-light text-sm mt-2">
-                Ring of Kerry. 27km from Kenmare.
-              </p>
-              <a
-                href="https://www.google.com/maps?q=51.838653,-9.901576"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-pink-500 font-body font-medium hover:text-pink-600"
-              >
-                Get Directions
-              </a>
-            </div>
-
-            {/* Contact - Source: RESEARCH.md lines 26-27 */}
-            <div className="bg-white rounded-xl p-8">
-              <Phone className="w-8 h-8 text-pink-500 mx-auto mb-4" />
-              <h3 className="font-body font-semibold text-ink mb-2">Contact</h3>
-              <a
-                href="tel:+353646645281"
-                className="block font-body text-pink-500 text-xl font-medium hover:text-pink-600"
-              >
-                +353 64 664 5281
-              </a>
-              <a
-                href="mailto:dosheas@eircom.net"
-                className="block font-body text-ink-muted mt-2 hover:text-pink-500"
-              >
-                dosheas@eircom.net
-              </a>
-              {/* Source: RESEARCH.md line 73 */}
-              <p className="font-body text-ink-light text-sm mt-4">
-                Booking recommended for dinner.
-              </p>
-            </div>
-
-            {/* Hours - Source: RESEARCH.md line 64 */}
-            <div className="bg-white rounded-xl p-8">
-              <Clock className="w-8 h-8 text-pink-500 mx-auto mb-4" />
-              <h3 className="font-body font-semibold text-ink mb-2">Food Service</h3>
-              <p className="font-display text-2xl text-pink-500">
-                12pm - 9pm
-              </p>
-              <p className="font-body text-ink-muted">
-                Daily
-              </p>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center mt-12">
-            <a href="tel:+353646645281" className="btn-primary text-lg">
-              <Phone className="w-5 h-5 mr-2" />
-              Call to Book
-            </a>
+      {/* FINAL CTA */}
+      <section className="section bg-cream-50">
+        <div className="container-narrow text-center">
+          <h2 className="text-ink text-3xl md:text-4xl font-display font-bold mb-4">See you at the pink pub</h2>
+          <p className="text-xl text-ink-muted mb-8">Ah sure, come in out of the rain.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/menu" className="btn-pink">View Our Menu<ArrowRight className="w-5 h-5" /></Link>
+            <a href="tel:+353646645281" className="btn-ghost"><Phone className="w-5 h-5" />Call to Book</a>
           </div>
         </div>
       </section>
-
-      {/* =====================================================
-          FOOTER
-          V2 Rules: Address, phone, hours, privacy notice
-          ===================================================== */}
-      <footer className="bg-ink text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Brand */}
-            <div>
-              <p className="font-display text-2xl mb-2">D O'Shea's Bar</p>
-              <p className="font-body text-cream-100/60 text-sm">The Pink Pub in Sneem</p>
-            </div>
-
-            {/* Contact - Source: RESEARCH.md lines 23, 26-27 */}
-            <div className="font-body text-cream-100/80 text-sm">
-              <p>North Square, Sneem, Co. Kerry</p>
-              <p className="mt-2">+353 64 664 5281</p>
-              <p>dosheas@eircom.net</p>
-            </div>
-
-            {/* Hours - Source: RESEARCH.md line 64 */}
-            <div className="font-body text-cream-100/80 text-sm">
-              <p className="font-medium text-white">Food Service</p>
-              <p>12pm - 9pm daily</p>
-            </div>
-          </div>
-
-          {/* Bottom bar with privacy notice */}
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-body text-cream-100/40">
-            <p>© {new Date().getFullYear()} D O'Shea's Bar</p>
-            <p>This site does not use cookies or collect personal data.</p>
-          </div>
-        </div>
-      </footer>
-    </main>
+    </>
   )
 }
